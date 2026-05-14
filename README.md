@@ -19,13 +19,13 @@ Generate SES smtp credentials for a user and store the credentials in a SecretsM
 ### TypeScript
 
 ```shell
-npm install @pepperize/cdk-ses-smtp-credentials
+npm install @mobalab/cdk-ses-smtp-credentials
 ```
 
 or
 
 ```shell
-yarn add @pepperize/cdk-ses-smtp-credentials
+yarn add @mobalab/cdk-ses-smtp-credentials
 ```
 
 ### Python
@@ -53,10 +53,10 @@ dotnet add package Pepperize.CDK.SesSmtpCredentials
 ## Usage
 
 ```shell
-npm install @pepperize/cdk-ses-smtp-credentials
+npm install @mobalab/cdk-ses-smtp-credentials
 ```
 
-See [API.md](https://github.com/pepperize/cdk-ses-smtp-credentials/blob/main/API.md).
+See [API.md](https://github.com/mobalab/cdk-ses-smtp-credentials/blob/main/API.md).
 
 ### Create AWS SES Smtp Credentials for a given user
 
@@ -64,7 +64,7 @@ See [API.md](https://github.com/pepperize/cdk-ses-smtp-credentials/blob/main/API
 
 ```typescript
 import { User } from "@aws-cdk/aws-iam";
-import { SesSmtpCredentials } from "@pepperize/cdk-ses-smtp-credentials";
+import { SesSmtpCredentials } from "@mobalab/cdk-ses-smtp-credentials";
 
 const user = new User(stack, "SesUser", {
   userName: "ses-user",
@@ -76,7 +76,7 @@ const smtpCredentials = new SesSmtpCredentials(this, "SmtpCredentials", {
 // smtpCredentials.secret contains json value {username: "<the generated access key id>", password: "<the calculated ses smtp password>"}
 ```
 
-See [API Reference - SesSmtpCredentials](https://github.com/pepperize/cdk-ses-smtp-credentials/blob/main/API.md#sessmtpcredentials-)
+See [API Reference - SesSmtpCredentials](https://github.com/mobalab/cdk-ses-smtp-credentials/blob/main/API.md#sessmtpcredentials-)
 
 ### Create AWS SES Smtp Credentials and create a new user
 
@@ -84,7 +84,7 @@ See [API Reference - SesSmtpCredentials](https://github.com/pepperize/cdk-ses-sm
 
 ```typescript
 import { User } from "@aws-cdk/aws-iam";
-import { SesSmtpCredentials } from "@pepperize/cdk-ses-smtp-credentials";
+import { SesSmtpCredentials } from "@mobalab/cdk-ses-smtp-credentials";
 
 const smtpCredentials = new SesSmtpCredentials(this, "SmtpCredentials", {
   userName: "ses-user",
@@ -93,13 +93,13 @@ const smtpCredentials = new SesSmtpCredentials(this, "SmtpCredentials", {
 // smtpCredentials.secret contains json value {username: "<the generated access key id>", password: "<the calculated ses smtp password>"}
 ```
 
-See [API Reference - SesSmtpCredentials](https://github.com/pepperize/cdk-ses-smtp-credentials/blob/main/API.md#sessmtpcredentials-)
+See [API Reference - SesSmtpCredentials](https://github.com/mobalab/cdk-ses-smtp-credentials/blob/main/API.md#sessmtpcredentials-)
 
 ### Calculate the AWS SES Smtp password on your own
 
 ```typescript
 import * as AWS from "aws-sdk";
-import { calculateSesSmtpPassword } from "@pepperize/cdk-ses-smtp-credentials";
+import { calculateSesSmtpPassword } from "@mobalab/cdk-ses-smtp-credentials";
 
 const iam = new AWS.IAM();
 const accessKey = await iam
