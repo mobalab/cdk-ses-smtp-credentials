@@ -1,9 +1,9 @@
 {
-  "name": "@pepperize/cdk-ses-smtp-credentials",
+  "name": "@mobalab/cdk-ses-smtp-credentials",
   "description": "Generate SES smtp credentials for a given user and store the credentials in a SecretsManager Secret.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pepperize/cdk-ses-smtp-credentials.git"
+    "url": "https://github.com/mobalab/cdk-ses-smtp-credentials.git"
   },
   "scripts": {
     "build": "npx projen build",
