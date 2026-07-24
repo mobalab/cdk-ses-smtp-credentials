@@ -47,7 +47,7 @@
     "@types/sinon": "^10.0.17",
     "@typescript-eslint/eslint-plugin": "^8",
     "@typescript-eslint/parser": "^8",
-    "aws-cdk-lib": "2.173.2",
+    "aws-cdk-lib": "2.260.0",
     "aws-lambda": "^1.0.7",
     "aws-sdk": "^2.1467.0",
     "aws-sdk-mock": "^5.8.0",
